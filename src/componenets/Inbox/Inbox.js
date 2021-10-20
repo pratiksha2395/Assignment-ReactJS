@@ -1,7 +1,7 @@
 import React from "react";
 import MailList from "../Mails/MailList";
 import SideNav from "../SideNav/SideNav";
-import { mailListdata } from "../data/mailList";
+import { mailListdata } from "../../data/mailList";
 
 class Inbox extends React.Component {
   constructor(props) {
@@ -72,27 +72,33 @@ class Inbox extends React.Component {
     });
 
     return (
-      <div >
-        <div className="container searchForm mt-4" >
-          <form>
-            <input
-              type="text"
-              id="filter"
-              defaultValue={this.state.search}
-              name="search"
-              onChange={this.handleSearch}
-              placeholder="search"
-              className="form-control float-end w-25 mt-3"
-            />
-          </form>
-          <div></div>
-        </div>
+      <div className="container">
+        <div style={{width:'10%'}}>
         <SideNav flagedCount={this.state.flagedCount} mailCount={mailCount} />
+        </div>
+        
+        
+        <div style={{width:'90%', paddingLeft:'20%'}}>
+        <section class="text-light pe-5">
+        <div >
+            <div class="d-md-flex justify-content-end align-items-center ">
+                
+                <div class="input-group mb-3 newsgoroup" style={{width:'40%'}}>
+                    <input type="text" class="form-control" placeholder="Search" 
+                    defaultValue={this.state.search}
+                    name="search"
+                    onChange={this.handleSearch}/>
+                    <button class="btn  btn-lg bg-primary" type="button"><i className="bi bi-search "></i></button>
+                </div>
+            </div>
+        </div>
+        </section>
         <MailList
           MailList={this.state.MailList}
           removeMail={this.removeMail}
           flagMail={this.flagMail}
         />
+        </div>
       </div>
     );
   }

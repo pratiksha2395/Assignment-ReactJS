@@ -1,5 +1,5 @@
 import React from "react";
-
+import './mail.css'
 class Mail extends React.Component {
   constructor(props) {
     super(props);
@@ -8,11 +8,12 @@ class Mail extends React.Component {
   render() {
     const { title, description, date, id, isRead } = this.props.mail;
     return (
-      <div
-        className="mb-5 card p-2 mt-5"
-        style={{ borderLeft: "5px solid #ad0c0c" }}
+      <div 
+        className="mb-5 card p-2 mt-5" 
+        style={{ borderLeft: "5px solid #ad0c0c" }} 
       >
-        <div className="d-md-flex justify-content-between align-items-center">
+        <div className={isRead ? 'coloured' : null}>
+        <div className="d-md-flex justify-content-between align-items-center" > 
           <h5 className="fw-bold">{title}</h5>
 
           <p>
@@ -41,6 +42,7 @@ class Mail extends React.Component {
               <i className="bi bi-exclamation-triangle fw-bold"></i>
             </button>
           </p>
+        </div>
         </div>
       </div>
     );

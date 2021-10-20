@@ -1,12 +1,12 @@
 import './App.css';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Inbox from './Inbox/Inbox';
-import Flagged from './Flagged/Flagged';
+import Inbox from './componenets/Inbox/Inbox';
+import Flagged from './componenets/Flagged/Flagged';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container p-3">
       <Router>
     <main>
       

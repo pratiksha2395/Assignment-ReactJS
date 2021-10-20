@@ -1,6 +1,6 @@
 import React from "react";
 import './MailList.css'
-import Mail from "../Mails/Mail";
+import Mail from "./Mail";
 class MailList extends React.Component {
   constructor(props) {
     super(props);
@@ -8,7 +8,7 @@ class MailList extends React.Component {
 
   render() {
     return (
-      <div className="container heading" >
+      <div className="container heading ps-5" >
         <div className="bg-light text-dark text-start">
           <h5 className="mt-3 p-3">Last Month</h5>
         </div>
