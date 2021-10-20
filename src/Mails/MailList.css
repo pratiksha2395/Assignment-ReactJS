@@ -1,0 +1,11 @@
+@media (max-width: 1400px) {
+    .heading{
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .heading{
+        margin-right: 0;
+    }
+}
