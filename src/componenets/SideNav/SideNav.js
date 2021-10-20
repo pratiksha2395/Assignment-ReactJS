@@ -66,7 +66,7 @@ const SideNav = (props) => {
                 style={{ backgroundColor: activeColor("/") }}
               >
                 Inbox{" "}
-                <span className="badge bg-primary">{props.mailCount}</span>
+                <span className="badge bg-primary"> {props.mailCount>0 ? props.mailCount : ''}</span>
               </MenuItem>
               <MenuItem
                 icon={<FaFlag />}
@@ -74,7 +74,7 @@ const SideNav = (props) => {
                 style={{ backgroundColor: activeColor("/flagged") }}
               >
                 Flagged{" "}
-                <span className="badge bg-primary">{props.flagedCount}</span>
+                <span className="badge bg-primary">{props.flagedCount>0 ? props.flagedCount : ''}</span>
               </MenuItem>
               <MenuItem icon={<FaExclamationTriangle />}>Spam</MenuItem>
               <MenuItem icon={<FaTrash />}>Deleted</MenuItem>
