@@ -29,4 +29,18 @@ export const mailListdata = [
     description: "Navratri Celebrations - Few hours to go..... Register Now!!!",
     isRead: true,
   },
+  {
+    id: 5,
+    title: "INDIA-HR",
+    date: "24-3-2021",
+    description: "Navratri Celebrations - Few hours to go..... Register Now!!!",
+    isRead: false,
+  },
+  {
+    id: 6,
+    title: "React JS Recruitment",
+    date: "15-10-2021",
+    description: "Refer Your Buddies For ReactJS Position!!!!",
+    isRead: false,
+  },
 ];
